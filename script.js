@@ -1,5 +1,4 @@
 console.log('--JS--');
-
 const list = JSON.parse(localStorage.getItem('list'));
 //   {
 //     id:'id1',
