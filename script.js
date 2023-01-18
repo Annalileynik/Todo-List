@@ -19,7 +19,6 @@ const list = JSON.parse(localStorage.getItem('list'));
 // ]
 // const listElement = document.getElementById('list');
 // const todoInput = document.getElementById('todoInput');
-
 function render (){
   listElement.innerHTML=null;
   list.forEach(el =>{
@@ -37,7 +36,6 @@ function render (){
   })
 }
 render();
-
 listElement.addEventListener('click', (event)=>{
 if(event.target.nodeName ==='BUTTON'){
   const id =event.target.id;
@@ -48,7 +46,6 @@ if(event.target.nodeName ==='BUTTON'){
   render();
 }
 })
-
 function addTodoList(){
   const todoInputValue = todoInput.value;
   list.push(
@@ -57,11 +54,10 @@ function addTodoList(){
     title:todoInputValue,
       done:false,
       })
-
   updateLocalStorage();
   render()
   todoInput.value=null;
 }
 function updateLocalStorage(){
   localStorage.setItem('list', JSON.stringify(list));
-}
+};
