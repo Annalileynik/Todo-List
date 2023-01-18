@@ -19,6 +19,8 @@ const list = JSON.parse(localStorage.getItem('list'));
 // ]
 // const listElement = document.getElementById('list');
 // const todoInput = document.getElementById('todoInput');
+
+
 function render (){
   listElement.innerHTML=null;
   list.forEach(el =>{
